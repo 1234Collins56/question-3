@@ -1,0 +1,47 @@
+/* General page styles */
+:root { --ink:#203029; --green:#315b4d; --muted:#63716a; --pale:#edf2ec; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:#fcfdfa; font-family:Arial,Helvetica,sans-serif; line-height:1.7; }
+.container { width:min(1050px,88%); margin:0 auto; }
+
+/* Header and navigation */
+.site-header { background:#fff; border-bottom:1px solid #e4e9e4; }
+.header-content { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.brand { color:var(--green); font-size:19px; font-weight:800; text-decoration:none; }
+nav { display:flex; flex-wrap:wrap; gap:24px; }
+nav a { color:var(--muted); font-size:14px; font-weight:700; text-decoration:none; }
+nav a:hover { color:var(--green); }
+
+/* Welcome banner */
+.hero { padding:100px 0; background:linear-gradient(120deg,#eaf1e9,#f8f7ef); }
+.eyebrow { margin:0 0 12px; color:var(--green); font-size:11px; font-weight:800; letter-spacing:2px; }
+h1,h2,h3 { line-height:1.2; }
+h1 { max-width:750px; margin:0 0 18px; font-size:clamp(42px,7vw,68px); letter-spacing:-2px; }
+h1 span { color:var(--green); }
+.lead { max-width:620px; color:var(--muted); font-size:17px; }
+.button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:4px; background:var(--green); color:#fff; font-size:13px; font-weight:700; text-decoration:none; }
+.button:hover { background:#203f35; }
+
+/* Main content sections */
+.section { padding-top:72px; padding-bottom:72px; }
+.section h2 { margin:0 0 20px; font-size:34px; }
+.section p:not(.eyebrow) { max-width:800px; color:var(--muted); }
+.shaded { background:var(--pale); }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; }
+.card { padding:24px; border:1px solid #e1e8df; border-radius:7px; background:#fff; }
+.card h3 { color:var(--green); }
+.card p { margin-bottom:0; font-size:14px; }
+
+/* Footer */
+.footer { padding:25px 0; background:#1e352c; color:#e7eee8; font-size:12px; }
+.footer p { margin:4px 0; }
+
+/* Responsive styling for smaller screens */
+@media (max-width:650px) {
+  .header-content { align-items:flex-start; flex-direction:column; padding:15px 0; }
+  nav { gap:14px; }
+  .hero { padding:70px 0; }
+  .section { padding-top:52px; padding-bottom:52px; }
+  .cards { grid-template-columns:1fr; }
+}
